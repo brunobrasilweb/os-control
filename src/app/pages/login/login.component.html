@@ -1,0 +1,21 @@
+<div class="login">
+  <form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">OS Control</h1>
+
+    <form [formGroup]="login" (ngSubmit)="logar()" id="login-form" [ngClass]="{'is-submitted': isSubmitted}" method="post">
+      <div class="form-group">
+          <div class="input-group-icon right">
+              <input class="form-control" type="login" formControlName="usuario" placeholder="Login" autocomplete="off">
+          </div>
+      </div>
+      <div class="form-group">
+          <div class="input-group-icon right">
+              <input class="form-control" type="password" formControlName="senha" placeholder="Senha">
+          </div>
+      </div>
+      <div class="form-group">
+          <button class="btn btn-info btn-block" type="submit">Entrar</button>
+      </div>
+    </form>
+  </form>
+</div>

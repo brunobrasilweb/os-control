@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+      <h3>Cadastrar Ordem de Serviço</h3>
+    </div>
+  
+    <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+      <button class="btn btn-block btn-primary" [routerLink]="'/os'">Listagem</button>
+    </div>
+  </div>
+  <hr>
+
+  <form [formGroup]="os" (ngSubmit)="save()" [ngClass]="{'is-submitted': isSubmitted}" novalidate>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-row">
+          <div class="form-group required col-md-12">
+            <label>Cliente</label>
+            <select class="form-control" formControlName="cliente">
+              <option *ngFor="let c of clientes" [ngValue]="c">{{ c.nome }}</option>
+            </select>
+          </div>
+          <div class="form-group required col-md-12">
+            <label>Data Entrega</label>
+            <input type="text" class="form-control" formControlName="dtentrada" />
+          </div>
+          <div class="form-group required col-md-12">
+            <label>Serviço</label>
+            <select class="form-control" formControlName="servico">
+              <option *ngFor="let s of servicos" [ngValue]="s">{{ s.descricao }}</option>
+            </select>
+          </div>
+          <div class="form-group required col-md-6">
+            <label>Descrição do Problema</label>
+            <textarea class="form-control" formControlName="descproblema" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-group required col-md-6">
+            <label>Descrição da Solução</label>
+            <textarea class="form-control" formControlName="descsolucao" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-2 margin-top-20">
+        <button type="submit" [disabled]="disabledSubmit" class="btn btn-block btn-success">Salvar</button>
+      </div>
+    </div>
+  </form>
+</div>

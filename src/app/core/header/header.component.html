@@ -1,0 +1,25 @@
+<header id="header" class="topbar">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" id="sidebarCollapse" (click)="sidebarToggle()" class="navbar-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="btn-group menu-user">
+        <div ngbDropdown role="group" placement="bottom-right">
+          <button type="button" class="btn btn-light" id="my-account" ngbDropdownToggle>
+            <img src="http://pluspng.com/img-png/user-png-icon-male-user-icon-512.png" alt="user" class="profile-pic">
+          </button>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="my-account">
+            <div class="dropdown-divider"></div>
+            <button (click)="signOut()" class="dropdown-item">Sair</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

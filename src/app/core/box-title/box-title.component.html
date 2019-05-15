@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+    <h3>{{ title }}</h3>
+  </div>
+
+  <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+    <div *ngIf="buttons.length > 1" ngbDropdown class="btn-block" placement="bottom-right">
+      <button class="btn btn-block btn-primary" id="accessTop" ngbDropdownToggle>Ir para</button>
+      <div ngbDropdownMenu aria-labelledby="accessTop">
+        <button *ngFor="let button of buttons" class="dropdown-item" [routerLink]="button.route">{{ button.name }}</button>
+      </div>
+    </div>
+    <button *ngIf="buttons.length == 1" class="btn btn-block btn-primary" [routerLink]="buttons[0].route">{{ buttons[0].name }}</button>
+  </div>
+</div>
+<hr>
