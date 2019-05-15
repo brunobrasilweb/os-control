@@ -1,4 +1,4 @@
-# Intranet Client
+# OS Control
 
 ## Tecnologia
 
@@ -6,25 +6,11 @@
 - Bootstrap 4
 - NodeJs 8.11.1
 - NPM 5.6.0
-
-## Instruções para build - PRODUCTION
-
-### 1. Comando para atualizar os pacotes
+- Java com Spring Boot
 
 `npm install`
 
+`npm run dev`
+
 OBS
 - NODE e NPM instalado no servidor
-
-### 2. Comando para o build
-
-`npm run build:prod`
-
-Diretório do build: `dist/`
-
-### 3. Comando para rodar o node server
-
-`npm run serve:prod`
-
-OBS
-- Para rodar deve ter um apache ou nginx
